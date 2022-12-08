@@ -1,0 +1,225 @@
+
+@font-face {
+    font-family: "Overpass-Regular";
+    src: url("../fonts/Overpass-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Overpass-Bold";
+    src: url("../fonts/Overpass-Bold.ttf");
+}
+
+:root {
+    --clr-primary-500: hsl(25, 97%, 53%);
+
+    --clr-neutral-500: hsl(216, 12%, 8%);
+    --clr-neutral-400: hsl(213, 19%, 18%);
+    --clr-neutral-300: hsl(216, 12%, 54% , 20%);
+    --clr-neutral-200: hsl(217, 12%, 63%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --ff-body: "Overpass-Regular";
+    --ff-heading: "Overpass-Bold";
+
+    --fs-500: 1.75rem;
+    --fs-400: 1.25rem;
+    --fs-300: 0.9375rem;
+}
+
+/*--------------utility-classes----------------*/
+
+.clr-primary-500 { color: var(--clr-primary-500);}
+
+.bg-clr-primary-500 { background-color: var(--clr-primary-500);}
+
+.clr-neutral-200 { color: var(--clr-neutral-200);}
+.clr-neutral-100 { color: var(--clr-neutral-100);}
+
+.bg-clr-neutral-500 { background-color: var(--clr-neutral-500);}
+.bg-clr-neutral-400 { background-color: var(--clr-neutral-400);}
+.bg-clr-neutral-300 { background-color: var(--clr-neutral-300);}
+
+.ff-body { font-family: var(--ff-body);}
+.ff-heading { font-family: var(--ff-heading);}
+
+.fs-body { font-size: var(--fs-300);}
+.fs-numbers { font-size: var(--fs-400);}
+.fs-heading { font-size: var(--fs-500);}
+
+
+
+/*--------------------reset--------------------*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/*---------------general-----------------*/
+
+:focus {
+    outline: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+.container {
+    --max-width: 400px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), calc(100% - var(--padding)*2));
+    margin-inline: auto;
+}
+
+.rating-component {
+    position: relative;
+}
+
+.display {
+    display: none;
+}
+
+/*-------------rating-component--------------*/
+
+.rating-component-main,
+.thank-you-component {
+    padding: 2em;
+    border-radius: 1rem;
+}
+
+.star {
+    margin-bottom: 2em;
+}
+
+.rating-system {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1.5em 0;
+}
+
+.rating-system >* {
+    margin-inline: auto;
+}
+
+.star-number {
+    color: var(--clr-neutral-200);
+}
+
+.star,
+.star-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+
+.star-number:hover,
+.star-number[aria-pressed = "true"] {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-500);
+}
+
+.star-number:focus {
+    border: 1px solid var(--clr-primary-500);
+}
+
+.submit-button {
+    line-height: 1;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    padding: .75em 0;
+    margin: 0;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    color: var(--clr-primary-500);
+    background-color: var(--clr-neutral-100);
+}
+
+/*------------thank-you-component--------------*/
+
+.thank-you-component {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.thank-you-component h2 {
+    margin-bottom: .25em;
+}
+
+.thank-you-image,
+.user-selection {
+    margin-bottom: 2em;
+}
+
+.thank-you-image >* {
+    margin-inline: auto;
+}
+
+.user-selection {
+    width: fit-content;
+    margin-inline: auto;
+    border-radius: 1.5rem;
+    padding: .25em 1em;
+}
+
+
+
+
+
+

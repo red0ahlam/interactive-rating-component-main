@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="interactive-rating-component-main.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-clr-neutral-500">
+
+    <main class="container">
+        <div class="rating-component | ff-body fs-body clr-neutral-200">
+            <div class="rating-component-main | bg-clr-neutral-400">
+                <div class="star | bg-clr-neutral-300">
+                    <img src="images/icon-star.svg" alt="" aria-hidden="true">
+                </div>
+                <h1 class="ff-heading fs-heading clr-neutral-100">How did we do?</h1>
+                <p>Please let us know how we did with your support request. All feedback is appreciated to help us
+                    improve our offering!</p>
+                <ul class="rating-system | fs-numbers" aria-label="stars rating system">
+                    <li>
+                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">1 <span
+                                class="visually-hidden">star</span></button>
+                    </li>
+                    <li>
+                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">2 <span
+                                class="visually-hidden">star</span></button>
+                    </li>
+                    <li>
+                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">3 <span
+                                class="visually-hidden">star</span></button>
+                    </li>
+                    <li>
+                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">4 <span
+                                class="visually-hidden">star</span></button>
+                    </li>
+                    <li>
+                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">5 <span
+                                class="visually-hidden">star</span></button>
+                    </li>
+                </ul>
+                <button class="submit-button | bg-clr-primary-500 clr-neutral-100">Submit</button>
+            </div>
+
+            <div class="thank-you-component | display bg-clr-neutral-400">
+                <div class="thank-you-image">
+                    <img src="images/illustration-thank-you.svg" alt="" aria-hidden="true">
+                </div>
+                <div class="user-selection | bg-clr-neutral-300 clr-primary-500">
+                    You selected <span id="selected"></span> out of 5
+                </div>
+                <h2 class="ff-heading fs-heading clr-neutral-100">Thank you!</h2>
+                <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate
+                    to get in touch!</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="interactive-rating-component-main.js"></script>
+</body>
+
+</html>
