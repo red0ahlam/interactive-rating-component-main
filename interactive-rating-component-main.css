@@ -124,6 +124,10 @@ body {
     display: none;
 }
 
+.error {
+    margin-top: .5em;
+}
+
 /*-------------rating-component--------------*/
 
 .rating-component-main,
