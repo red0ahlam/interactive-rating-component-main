@@ -3,6 +3,7 @@ const star_number = document.querySelectorAll('.star-number');
 const submit_btn = document.querySelector('.submit-button');
 const thank_you_component = document.querySelector('.thank-you-component');
 const selected = document.getElementById("selected");
+const error = document.querySelector('.error');
 
 function pressed(e) {
     for (let i = 0; i < star_number.length; i++) {
@@ -15,10 +16,24 @@ function pressed(e) {
     }
 }
 
+function checkPressed() {
+    for (let i = 0; i < star_number.length; i++) {
+        if (star_number[i].getAttribute("aria-pressed") == 'true') {
+            return true;
+        }
+    }
+    return false;
+}
+
 for (let i = 0; i < star_number.length; i++) {
     star_number[i].addEventListener("click", pressed);
 }
 
 submit_btn.addEventListener("click", () => {
-    thank_you_component.classList.remove("display");
+    
+      if (checkPressed()) {
+        thank_you_component.classList.remove("display");
+    } else {
+        error.classList.remove("display");
+    }
 })
