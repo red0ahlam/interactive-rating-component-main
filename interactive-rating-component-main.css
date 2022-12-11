@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: "Overpass-Regular";
-    src: url("../fonts/Overpass-Regular.ttf");
+    src: url("Overpass-Regular.ttf");
 }
 
 @font-face {
     font-family: "Overpass-Bold";
-    src: url("../fonts/Overpass-Bold.ttf");
+    src: url("Overpass-Bold.ttf");
 }
 
 :root {
@@ -24,11 +24,6 @@
     --fs-500: 1.75rem;
     --fs-400: 1.25rem;
     --fs-300: 0.9375rem;
-}
-
-input {
-    outline: none;
-    list-style: none;
 }
 
 /*--------------utility-classes----------------*/
