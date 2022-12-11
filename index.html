@@ -20,29 +20,32 @@
                 <h1 class="ff-heading fs-heading clr-neutral-100">How did we do?</h1>
                 <p>Please let us know how we did with your support request. All feedback is appreciated to help us
                     improve our offering!</p>
-                <ul class="rating-system | fs-numbers" aria-label="stars rating system">
-                    <li>
-                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">1 <span
-                                class="visually-hidden">star</span></button>
-                    </li>
-                    <li>
-                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">2 <span
-                                class="visually-hidden">stars</span></button>
-                    </li>
-                    <li>
-                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">3 <span
-                                class="visually-hidden">stars</span></button>
-                    </li>
-                    <li>
-                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">4 <span
-                                class="visually-hidden">stars</span></button>
-                    </li>
-                    <li>
-                        <button class="star-number | bg-clr-neutral-300" aria-pressed="false">5 <span
-                                class="visually-hidden">stars</span></button>
-                    </li>
-                </ul>
-                <button class="submit-button | bg-clr-primary-500 clr-neutral-100">Submit</button>
+                <form id="rating-system" action="" method="post">
+                    <fieldset class="rating-system">
+                        <legend class="visually-hidden">Choose your rating</legend>
+
+                        <input id="one-star" class="star-number | bg-clr-neutral-300" type="radio" name="rating"
+                            value="1">
+                        <label for="one-star" class="visually-hidden">1 star</label>
+
+                        <input id="two-stars" class="star-number | bg-clr-neutral-300" type="radio" name="rating"
+                            value="2">
+                        <label for="two-stars" class="visually-hidden">2 stars</label>
+
+                        <input id="three-stars" class="star-number | bg-clr-neutral-300" type="radio" name="rating"
+                            value="3">
+                        <label for="three-stars" class="visually-hidden">3 stars</label>
+
+                        <input id="four-stars" class="star-number | bg-clr-neutral-300" type="radio" name="rating"
+                            value="4">
+                        <label for="four-stars" class="visually-hidden">4 stars</label>
+
+                        <input id="five-stars" class="star-number | bg-clr-neutral-300" type="radio" name="rating"
+                            value="5">
+                        <label for="five-stars" class="visually-hidden">5 stars</label>
+                    </fieldset>
+                </form>
+                <button class="submit-button | bg-clr-primary-500 clr-neutral-100" type="submit" form="rating-system">Submit</button>
                 <div class="error display | clr-primary-500">Please pick a rating first</div>
             </div>
 
